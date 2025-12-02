@@ -53,3 +53,16 @@
   cursor: pointer;
 }
 
+.welcome-text {
+  font-size: 20px;
+  color: #007bff;      /* match navbar color */
+  font-style: italic;
+  margin-bottom: 15px;  /* space between welcome text and form */
+  text-align: center;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+

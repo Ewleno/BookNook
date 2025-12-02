@@ -41,3 +41,15 @@
 .login-button:hover {
   background-color: #45a049;
 }
+.register-link {
+  margin-top: 15px;
+  color: gray;
+  font-size: 14px;
+}
+
+.register-link a {
+  color: gray;
+  text-decoration: underline;
+  cursor: pointer;
+}
+

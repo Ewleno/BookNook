@@ -31,7 +31,7 @@
   margin-top: 20px;
   border: none;
   border-radius: 5px;
-  background-color: #69a2d3;
+  background-color: #4a90e2;
   color: white;
   font-size: 18px;
   cursor: pointer;
@@ -39,7 +39,7 @@
 }
 
 .login-button:hover {
-  background-color: #45a049;
+  background-color: #adadad;
 }
 .register-link {
   margin-top: 15px;

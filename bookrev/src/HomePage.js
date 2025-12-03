@@ -11,15 +11,22 @@ function Home() {
   // Get all unique genres from booksData for the dropdown
   const genres = ["All", ...new Set(booksData.map((book) => book.genre))];
 
-  // Filter books by title and genre
+  // Filter + Sort Books
   const filteredBooks = booksData
-    .filter((book) => 
+    .filter((book) =>
       book.title.toLowerCase().includes(searchTitle.toLowerCase()) &&
       (selectedGenre === "All" || book.genre === selectedGenre)
     )
     .sort((a, b) => {
+      // ⭐ Sort by Title
       if (sortType === "title") return a.title.localeCompare(b.title);
+
+      // ⭐ Sort by Year
       if (sortType === "year") return a.year - b.year;
+
+      // ⭐ Sort by Rating (highest → lowest)
+      if (sortType === "rating") return (b.rating ?? 0) - (a.rating ?? 0);
+
       return 0;
     });
 
@@ -49,17 +56,18 @@ function Home() {
           ))}
         </select>
 
-        {/* Sort */}
+        {/* Sort Options */}
         <select
           value={sortType}
           onChange={(e) => setSortType(e.target.value)}
         >
           <option value="title">Sort by Title</option>
           <option value="year">Sort by Year</option>
+          <option value="rating">Sort by Rating ⭐</option>
         </select>
       </div>
 
-      {/* Book list */}
+      {/* Book List */}
       <div className="books-container">
         {filteredBooks.map((book, index) => (
           <BookCard key={index} book={book} />
@@ -70,3 +78,4 @@ function Home() {
 }
 
 export default Home;
+

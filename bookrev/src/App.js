@@ -8,15 +8,22 @@ import Home from "./HomePage";
 
 function App() {
   return (
-      <>
-   
+    <>
       <Navbar />
+
       <Routes>
-        <Route path="/" element={<Login />} />
+        {/* Landing page */}
+        <Route path="/" element={<Home />} />
+
+        {/* Auth pages */}
+        <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-         <Route path="/home" element={<Home />} />
+
+        {/* About page */}
+        <Route path="/about" element={<div style={{ padding: "20px" }}>About the app</div>} />
       </Routes>
-     <Footer />
+
+      <Footer />
     </>
   );
 }

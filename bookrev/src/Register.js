@@ -26,6 +26,7 @@ function Register() {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           className="login-input"
+            required
         />
 
         <input
@@ -34,6 +35,7 @@ function Register() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="login-input"
+            required
         />
 
         <input
@@ -42,6 +44,7 @@ function Register() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="login-input"
+            required
         />
 
         <button type="submit" className="login-button">

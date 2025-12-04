@@ -6,6 +6,7 @@
   background-color: #4a90e2;
   color: white;
   flex-wrap: wrap;
+  position: relative;
 }
 
 .navbar-logo {
@@ -18,16 +19,21 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  align-items: center;
 }
 
 .navbar-links li {
   margin-left: 20px;
+  position: relative;
 }
 
 .navbar-links li a {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 
 .navbar-links li a:hover {

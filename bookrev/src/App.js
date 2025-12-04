@@ -6,6 +6,8 @@ import Login from "./Login";
 import Register from "./Register";
 import Home from "./HomePage";
 
+
+
 function App() {
   return (
     <>
@@ -21,6 +23,7 @@ function App() {
 
         {/* About page */}
         <Route path="/about" element={<div style={{ padding: "20px" }}>About the app</div>} />
+
       </Routes>
 
       <Footer />

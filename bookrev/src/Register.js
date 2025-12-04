@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "./Login.css"; // reuse the same styling if you want
-import { useNavigate } from "react-router-dom";
+import "./Login.css"; // reuse the same styling
+import { useNavigate, Link } from "react-router-dom";
 
 function Register() {
   const [username, setUsername] = useState("");
@@ -8,11 +8,35 @@ function Register() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-
   const handleRegister = (e) => {
     e.preventDefault();
-   navigate("/home");
 
+    if (!username || !email || !password) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
+    // Save user to localStorage (optional simple registration)
+    const users = JSON.parse(localStorage.getItem("users")) || [];
+
+    // Check if username or email already exists
+    const userExists = users.some(
+      (user) => user.username === username || user.email === email
+    );
+    if (userExists) {
+      alert("Username or email already exists. Please login or use another.");
+      return;
+    }
+
+    const newUser = { username, email, password };
+    users.push(newUser);
+    localStorage.setItem("users", JSON.stringify(users));
+
+    // Save current logged-in user (optional)
+    localStorage.setItem("user", JSON.stringify({ username }));
+
+    // Redirect to Home page
+    navigate("/"); // <- redirect to landing page (Home)
   };
 
   return (
@@ -26,7 +50,7 @@ function Register() {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           className="login-input"
-            required
+          required
         />
 
         <input
@@ -35,7 +59,7 @@ function Register() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="login-input"
-            required
+          required
         />
 
         <input
@@ -44,7 +68,7 @@ function Register() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="login-input"
-            required
+          required
         />
 
         <button type="submit" className="login-button">
@@ -52,7 +76,7 @@ function Register() {
         </button>
 
         <p className="register-link">
-          Already have an account? <a href="/">Login</a>
+          Already have an account? <Link to="/login">Login</Link>
         </p>
       </form>
     </div>

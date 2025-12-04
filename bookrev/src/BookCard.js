@@ -20,14 +20,11 @@ export default function BookCard({ book }) {
           <div className="book-image-container">
             <img src={book.image} alt={book.title} />
           </div>
-
           <h3>{book.title}</h3>
           <p><strong>Author:</strong> {book.author}</p>
           <p><strong>Year:</strong> {book.year}</p>
           <p><strong>Genre:</strong> {book.genre}</p>
-
-          {/* ⭐ ADDED RATING HERE */}
-          <p><strong>Rating:</strong> {book.rating ?? "No rating"} ⭐</p>
+          <p><strong>Rating:</strong> ⭐ {book.rating}</p>
         </>
       )}
     </div>

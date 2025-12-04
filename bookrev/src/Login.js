@@ -9,8 +9,20 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
+
+    // Simple validation: make sure both fields are filled
+    if (!username || !password) {
+      alert("Please enter both username and password");
+      return;
+    }
+
+    // Example check: you can replace with actual auth
     if (username === "admin" && password === "1234") {
-      navigate("/home"); // navigate to Home page after login
+      // Save user in localStorage (optional)
+      localStorage.setItem("user", JSON.stringify({ username }));
+
+      // Redirect to Home page
+      navigate("/"); // <-- changed from "/home" to "/" because Home is your landing page
     } else {
       alert("Invalid username or password");
     }
@@ -18,7 +30,6 @@ function Login() {
 
   return (
     <div className="login-container">
-      {/* Welcome text */}
       <div className="welcome-text">
         <em>Welcome to <strong>NookBook</strong></em>
       </div>
@@ -31,6 +42,7 @@ function Login() {
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           className="login-input"
+          required
         />
         <br />
         <input
@@ -39,6 +51,7 @@ function Login() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="login-input"
+          required
         />
         <br />
         <button type="submit" className="login-button">

@@ -9,6 +9,7 @@ import mocking from "./Images/mockingBird.jpg";
 
 const booksData = [
   { 
+    id: 1,
     title: "1984", 
     author: "George Orwell", 
     genre: "Dystopian", 
@@ -18,6 +19,7 @@ const booksData = [
     description: "A chilling tale of a totalitarian regime that watches and controls every aspect of life, warning of the dangers of absolute power."
   },
   { 
+    id: 2,
     title: "Harry Potter", 
     author: "J.K. Rowling", 
     genre: "Fantasy", 
@@ -27,6 +29,7 @@ const booksData = [
     description: "The first magical adventure of a young wizard, Harry Potter, as he discovers Hogwarts School and battles dark forces."
   },
   { 
+    id: 3,
     title: "The Hobbit", 
     author: "J.R.R. Tolkien", 
     genre: "Adventure", 
@@ -36,6 +39,7 @@ const booksData = [
     description: "Bilbo Baggins embarks on an epic journey through Middle-earth, facing dragons, trolls, and treasure beyond imagination."
   },
   { 
+    id: 4,
     title: "The Great Gatsby", 
     author: "F. Scott Fitzgerald", 
     genre: "Classic", 
@@ -45,6 +49,7 @@ const booksData = [
     description: "A story of wealth, love, and the American Dream, as Jay Gatsby pursues his obsession with Daisy Buchanan."
   },
   { 
+    id: 5,
     title: "Moby Dick", 
     author: "Herman Melville", 
     genre: "Adventure", 
@@ -54,6 +59,7 @@ const booksData = [
     description: "Captain Ahab’s obsessive quest for the legendary white whale, exploring humanity, revenge, and fate."
   },
   { 
+    id: 6,
     title: "Pride and Prejudice", 
     author: "Jane Austen", 
     genre: "Romance", 
@@ -63,6 +69,7 @@ const booksData = [
     description: "Elizabeth Bennet navigates love, society, and family expectations in this timeless tale of romance and wit."
   },
   { 
+    id: 7,
     title: "The Catcher in the Rye", 
     author: "J.D. Salinger", 
     genre: "Classic", 
@@ -72,6 +79,7 @@ const booksData = [
     description: "Holden Caulfield recounts his struggles with adolescence, identity, and the phoniness of the adult world."
   },
   { 
+    id: 8,
     title: "To Kill a Mockingbird", 
     author: "Harper Lee", 
     genre: "Classic", 
@@ -81,6 +89,7 @@ const booksData = [
     description: "A moving story about racial injustice and moral growth in the American South, seen through young Scout Finch’s eyes."
   },
   { 
+    id: 9,
     title: "The Lord of the Rings", 
     author: "J.R.R. Tolkien", 
     genre: "Fantasy", 
@@ -90,6 +99,7 @@ const booksData = [
     description: "Frodo Baggins embarks on a perilous journey to destroy the One Ring and save Middle-earth from darkness."
   },
   { 
+    id: 10,
     title: "The Chronicles of Narnia", 
     author: "C.S. Lewis", 
     genre: "Fantasy", 
@@ -101,3 +111,4 @@ const booksData = [
 ];
 
 export default booksData;
+

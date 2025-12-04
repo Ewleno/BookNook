@@ -1,14 +1,18 @@
 import React, { useState } from "react";
 import "./Login.css"; // reuse the same styling if you want
+import { useNavigate } from "react-router-dom";
 
 function Register() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
 
   const handleRegister = (e) => {
     e.preventDefault();
-    alert("Account created successfully!");
+   navigate("/home");
+
   };
 
   return (

@@ -1,32 +1,35 @@
 /* Login.css */
 
 .login-container {
-  width: 350px;
-  margin: 80px auto;
-  padding: 40px;
+  max-width: 400px;      /* maximum width on large screens */
+  width: 90%;            /* responsive width on smaller screens */
+  margin: 50px auto;     /* centers vertically and horizontally */
+  padding: 30px 20px;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background-color: #f9f9f9;
   text-align: center;
   font-family: Arial, sans-serif;
+  box-sizing: border-box; /* include padding in width */
 }
 
 .login-container h2 {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   color: #333;
 }
 
 .login-input {
-  width: 90%;
+  width: 100%;           /* fills container width */
   padding: 12px 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  box-sizing: border-box;
 }
 
 .login-button {
-  width: 95%;
+  width: 100%;
   padding: 12px;
   margin-top: 20px;
   border: none;
@@ -39,8 +42,9 @@
 }
 
 .login-button:hover {
-  background-color: #adadad;
+  background-color: #3b7ac6;
 }
+
 .register-link {
   margin-top: 15px;
   color: gray;
@@ -55,14 +59,30 @@
 
 .welcome-text {
   font-size: 20px;
-  color: #007bff;      /* match navbar color */
+  color: #007bff;      
   font-style: italic;
-  margin-bottom: 15px;  /* space between welcome text and form */
+  margin-bottom: 15px;
   text-align: center;
 }
 
 .bold-text {
   font-weight: bold;
 }
+
+/* Responsive for small screens */
+@media (max-width: 400px) {
+  .login-container {
+    padding: 20px 15px;
+    margin: 30px auto;
+  }
+  .login-input, .login-button {
+    font-size: 14px;
+    padding: 10px;
+  }
+  .welcome-text {
+    font-size: 18px;
+  }
+}
+
 
 

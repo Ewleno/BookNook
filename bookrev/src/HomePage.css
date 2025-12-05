@@ -63,3 +63,16 @@
     width: 90%;
   }
 }
+/* HomePage.css */
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  padding: 10px;
+}
+
+@media (max-width: 600px) {
+  .books-container {
+    grid-template-columns: 1fr;
+  }
+}

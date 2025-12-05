@@ -13,7 +13,7 @@ function Login() {
     // Simple validation: make sure both fields are filled
     if (!username || !password) {
       alert("Please enter both username and password");
-      navigate("/home"); 
+     
       return;
       
     }

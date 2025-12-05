@@ -19,15 +19,6 @@ function Register() {
     // Save user to localStorage (optional simple registration)
     const users = JSON.parse(localStorage.getItem("users")) || [];
 
-    // Check if username or email already exists
-    const userExists = users.some(
-      (user) => user.username === username || user.email === email
-    );
-    if (userExists) {
-      alert("Username or email already exists. Please login or use another.");
-      return;
-    }
-
     const newUser = { username, email, password };
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));

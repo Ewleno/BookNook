@@ -36,7 +36,7 @@ function Register() {
     localStorage.setItem("user", JSON.stringify({ username }));
 
     // Redirect to Home page
-    navigate("/"); // <- redirect to landing page (Home)
+    navigate("/home"); // <- redirect to landing page (Home)
   };
 
   return (

@@ -9,10 +9,11 @@ function Login() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-  navigate("/home"); 
+  
     // Simple validation: make sure both fields are filled
     if (!username || !password) {
       alert("Please enter both username and password");
+      navigate("/home"); 
       return;
       
     }

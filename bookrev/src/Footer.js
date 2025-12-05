@@ -7,14 +7,15 @@ function Footer() {
     <footer>
       <div>&copy; 2025 NookBook</div>
       <div className="footer-links">
-        <Link to="/">HomePage</Link>   {/* Updated */}
-        <Link to="/login">Login</Link>
-        <Link to="/register">Register</Link>
-        <Link to="/about">About</Link>
+        <Link to="/home">Home</Link>          {/* ✅ Go to Home page */}
+        <Link to="/">Login</Link>             {/* ✅ Go to Login page */}
+        <Link to="/register">Register</Link>  {/* ✅ Register page */}
+        <Link to="/about">About</Link>        {/* ✅ About page */}
       </div>
     </footer>
   );
 }
 
 export default Footer;
+
 

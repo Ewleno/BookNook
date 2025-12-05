@@ -7,28 +7,21 @@ function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleLogin = (e) => {
-    e.preventDefault();
-  
-    // Simple validation: make sure both fields are filled
-    if (!username || !password) {
-      alert("Please enter both username and password");
-     
-      return;
-      
-    }
+ const handleLogin = (e) => {
+  e.preventDefault();
 
-    // Example check: you can replace with actual auth
-    if (username === "admin" && password === "1234") {
-      // Save user in localStorage (optional)
-      localStorage.setItem("user", JSON.stringify({ username }));
+  if (!username || !password) {
+    alert("Please enter both username and password");
+    return;
+  }
 
-      // Redirect to Home page
-      navigate("/"); // <-- changed from "/home" to "/" because Home is your landing page
-    } else {
-      alert("Invalid username or password");
-    }
-  };
+  if (username === "admin" && password === "1234") {
+    localStorage.setItem("user", JSON.stringify({ username }));
+    navigate("/home");
+  } else {
+    alert("Invalid username or password");
+  }
+};
 
   return (
     <div className="login-container">

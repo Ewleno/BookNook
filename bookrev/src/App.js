@@ -13,17 +13,12 @@ function App() {
       <Navbar />
 
       <Routes>
-        {/* Landing page */}
-         <Route path="/" element={<Login />} />  
-        <Route path="/home" element={<Home />} /> 
+  <Route path="/" element={<Login />} />         {/* Login is landing page */}
+  <Route path="/home" element={<Home />} />      {/* Home page */}
+  <Route path="/register" element={<Register />} />
+  <Route path="/about" element={<AboutUs />} />
+</Routes>
 
-        {/* Auth pages */}
-       
-        <Route path="/register" element={<Register />} />
-
-        {/* About page */}
-        <Route path="/about" element={<AboutUs />} />
-      </Routes>
 
       <Footer />
     </>

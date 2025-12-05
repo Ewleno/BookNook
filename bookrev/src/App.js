@@ -14,12 +14,12 @@ function App() {
 
       <Routes>
         {/* Landing page */}
-         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Home />} />
+        <Routes>
+  <Route path="/" element={<Login />} />        {/* FIRST PAGE */}
+  <Route path="/register" element={<Register />} />
+  <Route path="/home" element={<Home />} />      {/* AFTER LOGIN */}
+</Routes>
 
-        {/* Auth pages */}
-       
-        <Route path="/register" element={<Register />} />
 
         {/* About page */}
         <Route path="/about" element={<AboutUs />} />

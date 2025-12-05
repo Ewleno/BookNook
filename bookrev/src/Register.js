@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Login.css"; // reuse the same styling
+import "./Login.css"; // reuse the same styling as the lgoin page 
 import { useNavigate, Link } from "react-router-dom";
 
 function Register() {

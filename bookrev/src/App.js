@@ -5,8 +5,7 @@ import Footer from "./Footer";
 import Login from "./Login";
 import Register from "./Register";
 import Home from "./HomePage";
-
-
+import AboutUs from "./AboutUs";
 
 function App() {
   return (
@@ -22,8 +21,7 @@ function App() {
         <Route path="/register" element={<Register />} />
 
         {/* About page */}
-        <Route path="/about" element={<div style={{ padding: "20px" }}>About the app</div>} />
-
+        <Route path="/about" element={<AboutUs />} />
       </Routes>
 
       <Footer />
